@@ -31,7 +31,7 @@ class FileStorage:
                 partition = shlex.split(partition)
                 if (partition[0] == cls.__name__):
                     dic[key] = self.__objects[key]
-            return(dic)
+            return (dic)
         else:
         return self.__objects
 
