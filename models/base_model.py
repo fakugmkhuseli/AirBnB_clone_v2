@@ -52,13 +52,13 @@ class BaseModel:
 
     def to_dict(self):
         """Creates dictionary of the class."""
-        my_dict = dict(self.__dict__)
-        my_dict["__class__"] = str(type(self).__name__)
-        my_dict["created_at"] = self.created_at.isoformat()
-        my_dict["updated_at"] = self.updated_at.isoformat()
-        if '_sa_instance_state' in my_dict.keys():
-            del my_dict['_sa_instance_state']
-        return my_dict
+        odict = dict(self.__dict__)
+        odict["__class__"] = str(type(self).__name__)
+        odict["created_at"] = self.created_at.isoformat()
+        odict["updated_at"] = self.updated_at.isoformat()
+        if '_sa_instance_state' in odict.keys():
+            del odict['_sa_instance_state']
+        return odict
 
     def delete(self):
         """Deletes object."""
