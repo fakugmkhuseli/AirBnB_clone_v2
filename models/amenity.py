@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ State class for HBNB project """
-from models.base_model import BaseModel, Base
+from models.base_model import Base
+from models.base_model import BaseModel
 from sqlalchemy import Column, String
 from sqlalchemy.orm import relationship
 from models.place import place_amenity
