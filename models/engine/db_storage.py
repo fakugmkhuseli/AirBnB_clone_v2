@@ -37,7 +37,7 @@ class DBStorage:
                                       .format(user, passwd, host, db),
                                       pool_pre_ping=True)
 
-        if env == "test":
+        if getenv("HBNB_ENV") == "test":
             Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
